@@ -1,1 +1,1 @@
-### POC Drizzle ORM Lab
+### POC Drizzle ORM with SQLite
