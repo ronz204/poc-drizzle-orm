@@ -1,12 +1,12 @@
 import { Users } from "@Schemas/Users";
 import { UserSpec } from "@Specs/UserSpec";
-import { LibSQLDatabase } from "drizzle-orm/libsql";
+import { NodePgDatabase } from "drizzle-orm/node-postgres";
 
 type InsertInput = typeof Users.$inferInsert;
 type UpdateInput = Partial<InsertInput>;
 
 export class UserRepository {
-  constructor(private db: LibSQLDatabase) {};
+  constructor(private db: NodePgDatabase) {};
 
   public async insert(data: InsertInput) {
     const query = this.db.insert(Users).values(data);
