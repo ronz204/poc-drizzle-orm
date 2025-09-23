@@ -23,6 +23,15 @@
     // Some stricter flags (disabled by default)
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noPropertyAccessFromIndexSignature": false
+    "noPropertyAccessFromIndexSignature": false,
+
+    "baseUrl": ".",
+    "paths": {
+      "@Specs/*": ["src/Specs/*"],
+      "@Models/*": ["src/Models/*"],
+      "@Schemas/*": ["src/Schemas/*"],
+      "@Database/*": ["src/Database/*"],
+      "@Repositories/*": ["src/Repositories/*"],
+    }
   }
 }
