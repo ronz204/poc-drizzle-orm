@@ -31,8 +31,8 @@
       "@Models/*": ["src/Models/*"],
       "@Schemas/*": ["src/Schemas/*"],
       "@Database/*": ["src/Database/*"],
+      "@Repos/*": ["src/Repositories/*"],
       "@Interfaces/*": ["src/Interfaces/*"],
-      "@Repositories/*": ["src/Repositories/*"],
     }
   }
 }
