@@ -1,7 +1,8 @@
-import { pgTable, integer, varchar } from "drizzle-orm/pg-core";
+import { pgTable, varchar, serial } from "drizzle-orm/pg-core";
 
 export const Users = pgTable("users", {
-  id: integer("id").primaryKey().generatedAlwaysAsIdentity(),
-  name: varchar("name", { length: 256 }).notNull().unique(),
+  id: serial("id").primaryKey().notNull(),
+  name: varchar("name", { length: 256 }).notNull(),
   password: varchar("password", { length: 256 }).notNull(),
 });
+
