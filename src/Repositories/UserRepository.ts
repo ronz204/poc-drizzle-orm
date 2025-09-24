@@ -1,5 +1,5 @@
+import { eq } from "drizzle-orm";
 import { Users } from "@Schemas/Users";
-import { UserSpec } from "@Specs/UserSpec";
 import { NodePgDatabase } from "drizzle-orm/node-postgres";
 
 type InsertInput = typeof Users.$inferInsert;
@@ -14,12 +14,12 @@ export class UserRepository {
   };
 
   public async delete(id: number) {
-    const query = this.db.delete(Users).where(UserSpec.PredicateById(id));
+    const query = this.db.delete(Users).where(eq(Users.id, id));
     return await query.returning({ id: Users.id }).execute();
   };
 
   public async update(id: number, data: UpdateInput) {
-    const query = this.db.update(Users).set(data).where(UserSpec.PredicateById(id));
+    const query = this.db.update(Users).set(data).where(eq(Users.id, id));
     return await query.returning({ id: Users.id }).execute();
   };
 };
