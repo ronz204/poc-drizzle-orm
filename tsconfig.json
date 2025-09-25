@@ -27,11 +27,11 @@
 
     "baseUrl": ".",
     "paths": {
-      "@Specs/*": ["src/Specs/*"],
       "@Models/*": ["src/Models/*"],
       "@Schemas/*": ["src/Schemas/*"],
       "@Database/*": ["src/Database/*"],
       "@Repos/*": ["src/Repositories/*"],
+      "@Specs/*": ["src/Specifications/*"],
       "@Interfaces/*": ["src/Interfaces/*"],
     }
   }
