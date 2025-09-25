@@ -1,12 +1,19 @@
 import { eq } from "drizzle-orm";
 import { Users } from "@Schemas/Users";
 import { NodePgDatabase } from "drizzle-orm/node-postgres";
+import { UserSpecification } from "@Specs/UserSpecification";
 
+type SelectOutput = typeof Users.$inferSelect;
 type InsertInput = typeof Users.$inferInsert;
 type UpdateInput = Partial<InsertInput>;
 
 export class UserRepository {
   constructor(private db: NodePgDatabase) {};
+
+  public async select(spec: UserSpecification) {
+    const result = await spec.build().execute();
+    return result as SelectOutput[];
+  };
 
   public async insert(data: InsertInput) {
     const query = this.db.insert(Users).values(data);
