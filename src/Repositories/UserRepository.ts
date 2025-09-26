@@ -1,7 +1,7 @@
 import { eq } from "drizzle-orm";
 import { Users } from "@Database/Schemas/Users";
 import { NodePgDatabase } from "drizzle-orm/node-postgres";
-import { UserSpecification } from "@Specs/UserSpecification";
+import { UserSpecification } from "@Database/Specs/UserSpecification";
 
 type InsertInput = typeof Users.$inferInsert;
 type UpdateInput = Partial<InsertInput>;

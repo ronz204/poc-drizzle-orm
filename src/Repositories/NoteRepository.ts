@@ -1,12 +1,17 @@
 import { eq } from "drizzle-orm";
 import { Notes } from "@Database/Schemas/Notes";
 import { NodePgDatabase } from "drizzle-orm/node-postgres";
+import { NoteSpecification } from "@Database/Specs/NoteSpecification";
 
 type InsertInput = typeof Notes.$inferInsert;
 type UpdateInput = Partial<InsertInput>;
 
 export class NoteRepository {
   constructor(private db: NodePgDatabase) { };
+
+  public async select(spec: NoteSpecification) {
+    return await spec.build().execute();
+  };
 
   public async insert(data: InsertInput) {
     const query = this.db.insert(Notes).values(data);
