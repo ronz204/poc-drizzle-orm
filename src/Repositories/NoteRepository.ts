@@ -1,7 +1,7 @@
 import { eq } from "drizzle-orm";
 import { Notes } from "@Database/Schemas/Notes";
 import { NodePgDatabase } from "drizzle-orm/node-postgres";
-import { NoteSpecification } from "@Database/Specs/NoteSpecification";
+import { NoteSpecification } from "@Specs/Bases/NoteSpecification";
 
 type InsertInput = typeof Notes.$inferInsert;
 type UpdateInput = Partial<InsertInput>;
