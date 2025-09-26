@@ -1,5 +1,5 @@
 import { eq } from "drizzle-orm";
-import { Users } from "@Schemas/Users";
+import { Users } from "@Database/Schemas/Users";
 import { NodePgDatabase } from "drizzle-orm/node-postgres";
 import { UserSpecification } from "@Specs/UserSpecification";
 

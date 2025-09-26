@@ -1,5 +1,5 @@
 import { eq } from "drizzle-orm";
-import { Notes } from "@Schemas/Notes";
+import { Notes } from "@Database/Schemas/Notes";
 import { NodePgDatabase } from "drizzle-orm/node-postgres";
 
 type InsertInput = typeof Notes.$inferInsert;
