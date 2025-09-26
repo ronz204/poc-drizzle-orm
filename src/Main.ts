@@ -1,10 +1,9 @@
-import { Users } from "@Schemas/Users";
+import { Unit } from "@Database/Unit";
 import { Drizzle } from "@Database/Drizzle";
-import { UserRepository } from "@Repos/UserRepository";
-import { ExistingUserSpecification } from "@Specs/ExistingUserSpecification";
+import { ExistingUserSpec } from "@Specs/Shared/ExistingUserSpec";
 
-const repo = new UserRepository(Drizzle);
-const spec = new ExistingUserSpecification(1);
+const uow = new Unit(Drizzle);
+const spec = new ExistingUserSpec(1);
 
-const records = await repo.select(spec);
+const records = await uow.user.select(spec);
 console.log(records[0]?.name);

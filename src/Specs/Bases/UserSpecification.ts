@@ -1,6 +1,6 @@
 import { Drizzle } from "@Database/Drizzle";
 import { Users } from "@Database/Schemas/Users";
-import { Specification } from "./Specification";
+import { Specification } from "@Specs/Specification";
 
 export class UserSpecification extends Specification {
   constructor() {

@@ -25,16 +25,14 @@
     "noUnusedParameters": false,
     "noPropertyAccessFromIndexSignature": false,
 
+    // Base url & path aliases
     "baseUrl": ".",
     "paths": {
+      "@Specs/*": ["src/Specs/*"],
       "@Configs/*": ["src/Configs/*"],
       "@Handlers/*": ["src/Handlers/*"],
       "@Database/*": ["src/Database/*"],
       "@Repos/*": ["src/Repositories/*"],
-      
-      /* "@Schemas/*": ["src/Database/Schemas/*"], */
-
-      "@Specs/*": ["src/Specifications/*"],
     }
   }
 }
