@@ -27,12 +27,14 @@
 
     "baseUrl": ".",
     "paths": {
-      "@Models/*": ["src/Models/*"],
-      "@Schemas/*": ["src/Schemas/*"],
+      "@Configs/*": ["src/Configs/*"],
+      "@Handlers/*": ["src/Handlers/*"],
       "@Database/*": ["src/Database/*"],
       "@Repos/*": ["src/Repositories/*"],
+      
+      /* "@Schemas/*": ["src/Database/Schemas/*"], */
+
       "@Specs/*": ["src/Specifications/*"],
-      "@Interfaces/*": ["src/Interfaces/*"],
     }
   }
 }
