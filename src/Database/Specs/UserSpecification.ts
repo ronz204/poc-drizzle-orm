@@ -1,5 +1,5 @@
-import { Users } from "@Schemas/Users";
 import { Drizzle } from "@Database/Drizzle";
+import { Users } from "@Database/Schemas/Users";
 import { Specification } from "./Specification";
 
 export class UserSpecification extends Specification {
