@@ -3,13 +3,13 @@ import { Users } from "@Database/Schemas/Users";
 import { UserSpecification } from "@Specs/Bases/UserSpecification";
 
 interface Params {
-  id: number;
+  name: string
 };
 
 export class ExistingUserSpec extends UserSpecification {
   constructor(params: Params) {
     super();
     this.withPagination({ page: 1, limit: 1 });
-    this.withFiltering(eq(Users.id, params.id));
+    this.withFiltering(eq(Users.name, params.name));
   };
 };
