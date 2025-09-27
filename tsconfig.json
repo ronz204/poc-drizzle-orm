@@ -29,6 +29,7 @@
     "baseUrl": ".",
     "paths": {
       "@Specs/*": ["src/Specs/*"],
+      "@Errors/*": ["src/Errors/*"],
       "@Configs/*": ["src/Configs/*"],
       "@Handlers/*": ["src/Handlers/*"],
       "@Database/*": ["src/Database/*"],
